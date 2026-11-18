@@ -1,9 +1,11 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My Little Corner</title>
 
     <style>
@@ -31,20 +33,22 @@
             background: var(--cloud);
             color: var(--ink);
             font-family: Arial, sans-serif;
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
         .container {
-            max-width: 780px;
+            max-width: 760px;
             margin: 0 auto;
             padding: 0 28px;
         }
+
+        /* Navigation */
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 30px 0;
+            padding: 25px 0;
             border-bottom: 1px solid var(--line);
             gap: 20px;
         }
@@ -52,9 +56,8 @@
         .logo {
             font-family: Georgia, serif;
             font-size: 17px;
-            color: var(--ink);
+            color: var(--gold);
             text-decoration: none;
-            white-space: nowrap;
         }
 
         nav div {
@@ -74,75 +77,95 @@
             color: var(--gold);
         }
 
+        /* Introduction */
+
         .intro {
-            padding: 55px 0 35px;
+            padding: 38px 0 30px;
             font-family: Georgia, serif;
-            font-size: 21px;
+            font-size: 19px;
             line-height: 1.6;
             max-width: 680px;
             color: var(--ink);
         }
 
+        /* Sections */
+
         section {
-            padding: 27px 0;
+            padding: 24px 0;
             border-top: 1px solid var(--line);
+            scroll-margin-top: 20px;
         }
 
         section h2 {
             font-family: Georgia, serif;
-            font-size: 25px;
-            font-weight: normal;
-            margin-bottom: 5px;
-        }
-
-        .section-description {
-            color: var(--muted);
-            font-size: 14px;
-            margin-bottom: 18px;
-        }
-
-        .item {
-            padding: 15px 0;
-            border-bottom: 1px solid var(--line);
-        }
-
-        .item:last-child {
-            border-bottom: none;
-        }
-
-        .item h3 {
-            font-family: Georgia, serif;
-            font-size: 17px;
+            font-size: 22px;
             font-weight: normal;
             margin-bottom: 3px;
         }
 
-        .item p {
+        .section-description {
             color: var(--muted);
             font-size: 13px;
+            margin-bottom: 15px;
         }
 
-        .item a {
-            color: var(--gold);
+        /* Blog entries */
+
+        .entry {
+            margin-bottom: 17px;
+        }
+
+        .entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .entry-date {
+            display: block;
+            color: var(--muted);
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+
+        .entry h3 {
+            font-family: Georgia, serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .entry h3 a {
+            color: var(--ink);
             text-decoration: none;
-            font-size: 13px;
+            transition: color 0.2s;
         }
 
-        .item a:hover {
-            text-decoration: underline;
+        .entry h3 a:hover {
+            color: var(--gold);
         }
+
+        .entry p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* About */
 
         .about-text {
             max-width: 650px;
-            font-size: 15px;
-            line-height: 1.9;
+            font-size: 14px;
+            line-height: 1.8;
             color: var(--muted);
         }
 
+        /* Footer */
+
         footer {
             text-align: center;
-            padding: 35px 0;
-            margin-top: 10px;
+            padding: 30px 0;
+            margin-top: 5px;
             border-top: 1px solid var(--line);
             color: var(--muted);
             font-size: 12px;
@@ -152,11 +175,14 @@
             color: var(--gold);
         }
 
+        /* Mobile */
+
         @media (max-width: 600px) {
+
             nav {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 15px;
+                gap: 13px;
             }
 
             nav div {
@@ -164,19 +190,27 @@
             }
 
             .intro {
-                padding: 38px 0 28px;
-                font-size: 19px;
+                padding: 30px 0 25px;
+                font-size: 18px;
             }
 
             section {
-                padding: 23px 0;
+                padding: 21px 0;
+            }
+
+            section h2 {
+                font-size: 21px;
             }
         }
+
     </style>
 </head>
 
 <body>
+
     <div class="container">
+
+        <!-- Navigation -->
 
         <nav>
             <a href="#" class="logo">☁</a>
@@ -189,48 +223,94 @@
             </div>
         </nav>
 
+
+        <!-- Introduction -->
+
         <div class="intro">
             A collection of thoughts, experiences, and reflections on life,
             learning, and everything in between.
         </div>
 
+
+        <!-- Creating & Projects -->
+
         <section id="creating">
+
             <h2>Creating & Projects</h2>
+
             <p class="section-description">
                 Things I'm building, experimenting with, and bringing to life.
             </p>
 
-            <div class="item">
-                <h3>Projects coming soon</h3>
-                <p>A space for projects, experiments, and ideas.</p>
+            <div class="entry">
+                <span class="entry-date">Coming soon</span>
+
+                <h3>
+                    <a href="#">My first project</a>
+                </h3>
+
+                <p>
+                    A space for projects, experiments, and ideas.
+                </p>
             </div>
+
         </section>
 
+
+        <!-- Learning & Exploring -->
+
         <section id="learning">
+
             <h2>Learning & Exploring</h2>
+
             <p class="section-description">
                 My journey through deep learning, startups, and everything I'm curious about.
             </p>
 
-            <div class="item">
-                <h3>Learning notes coming soon</h3>
-                <p>A collection of things I'm discovering and learning along the way.</p>
+            <div class="entry">
+                <span class="entry-date">Coming soon</span>
+
+                <h3>
+                    <a href="#">Learning notes</a>
+                </h3>
+
+                <p>
+                    A collection of things I'm discovering and learning along the way.
+                </p>
             </div>
+
         </section>
 
+
+        <!-- Words & Reflections -->
+
         <section id="writing">
+
             <h2>Words & Reflections</h2>
+
             <p class="section-description">
                 Thoughts, experiences, and little things worth remembering.
             </p>
 
-            <div class="item">
-                <h3>First thoughts coming soon</h3>
-                <p>A place for personal writing, reflections, and observations.</p>
+            <div class="entry">
+                <span class="entry-date">Coming soon</span>
+
+                <h3>
+                    <a href="#">First thoughts</a>
+                </h3>
+
+                <p>
+                    A place for personal writing, reflections, and observations.
+                </p>
             </div>
+
         </section>
 
+
+        <!-- About -->
+
         <section id="about">
+
             <h2>About</h2>
 
             <p class="about-text">
@@ -239,12 +319,17 @@
                 and personally, and share the thoughts, experiences, and
                 discoveries along the way.
             </p>
+
         </section>
+
+
+        <!-- Footer -->
 
         <footer>
             Made with curiosity <span>✧</span>
         </footer>
 
     </div>
+
 </body>
 </html>
