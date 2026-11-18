@@ -1,10 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Sahel Arlimmi</title>
 
     <style>
@@ -31,7 +29,7 @@
         }
 
         a:hover {
-            text-decoration: underline;
+            color: #777;
         }
 
         .layout {
@@ -65,28 +63,15 @@
             gap: 9px;
         }
 
-        .nav-links a {
-            color: #555;
-            font-size: 15px;
-        }
-
-        .nav-links a:hover {
-            color: #000;
+        .nav-links a,
+        .social-links a {
+            font-size: 14px;
         }
 
         .social-links {
             display: flex;
             gap: 15px;
             margin-top: 35px;
-        }
-
-        .social-links a {
-            color: #777;
-            font-size: 14px;
-        }
-
-        .social-links a:hover {
-            color: #000;
         }
 
         main {
@@ -100,39 +85,33 @@
 
         section h2 {
             margin: 0 0 22px;
+            color: #111;
             font-family: Georgia, "Times New Roman", serif;
             font-size: 23px;
             font-weight: normal;
-            color: #111;
         }
 
-        .post {
+        .entry {
             margin-bottom: 25px;
         }
 
-        .post-date {
+        .entry-date {
             display: block;
             margin-bottom: 3px;
-            color: #999;
-            font-size: 13px;
+            color: #888;
+            font-size: 12px;
         }
 
-        .post-title {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 18px;
+        .entry-title {
             color: #222;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 17px;
         }
 
-        .post-description {
-            margin: 4px 0 0;
+        .entry-description {
+            margin: 3px 0 0;
             color: #666;
             font-size: 14px;
-        }
-
-        footer {
-            margin-top: 90px;
-            color: #aaa;
-            font-size: 13px;
         }
 
         @media (max-width: 700px) {
@@ -147,13 +126,14 @@
             }
 
             .site-title {
-                font-size: 33px;
+                font-size: 32px;
+                margin-bottom: 22px;
             }
 
             .nav-links {
                 flex-direction: row;
                 flex-wrap: wrap;
-                gap: 8px 20px;
+                gap: 8px 18px;
             }
 
             .social-links {
@@ -161,7 +141,7 @@
             }
 
             section {
-                margin-bottom: 55px;
+                margin-bottom: 50px;
             }
         }
     </style>
@@ -215,10 +195,6 @@
                 <!-- Add your reflections here -->
 
             </section>
-
-            <footer>
-                © 2026 Sahel Arlimmi
-            </footer>
 
         </main>
 
