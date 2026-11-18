@@ -1,29 +1,187 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+
+    <title>My Little Corner</title>
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
+            background: #faf9f6;
+            color: #292929;
+            font-family: Georgia, serif;
+            line-height: 1.8;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 60px auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 100px;
             font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            text-align: center;
-            padding: 60px 20px;
+            font-size: 13px;
+        }
+
+        nav a {
+            color: #777;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        nav a:hover {
+            color: #222;
         }
 
         h1 {
-            color: #333;
+            font-size: 42px;
+            font-weight: normal;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 23px;
+            font-weight: normal;
+            margin-bottom: 15px;
         }
 
         p {
             color: #666;
-            font-size: 18px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        section {
+            margin-top: 75px;
+        }
+
+        .post {
+            border-top: 1px solid #e5e2dc;
+            padding: 22px 0;
+        }
+
+        .post a {
+            color: #292929;
+            text-decoration: none;
+            font-size: 19px;
+        }
+
+        .post a:hover {
+            text-decoration: underline;
+        }
+
+        .date {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            color: #999;
+            margin-top: 5px;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e2dc;
+            font-size: 12px;
+            color: #999;
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 34px;
+            }
+
+            nav {
+                margin-bottom: 70px;
+            }
+
+            nav a {
+                margin-left: 10px;
+            }
         }
     </style>
 </head>
+
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>This is my first GitHub Pages website.</p>
+    <div class="container">
+
+        <nav>
+            <span>MY CORNER.</span>
+            <div>
+                <a href="#writing">Writing</a>
+                <a href="#learning">Learning</a>
+                <a href="#about">About</a>
+            </div>
+        </nav>
+
+        <header>
+            <h1>A little space to think, learn, and grow.</h1>
+
+            <p>
+                Welcome to my little corner of the internet.
+                A place where I document my thoughts,
+                share what I'm learning, explore ideas,
+                and reflect on the journey along the way.
+            </p>
+        </header>
+
+        <section id="writing">
+            <h2>Writing & Reflections</h2>
+
+            <p>
+                Thoughts, experiences, observations,
+                and everything in between.
+            </p>
+
+            <div class="post">
+                <a href="#">On starting something new</a>
+                <div class="date">A THOUGHT · COMING SOON</div>
+            </div>
+        </section>
+
+        <section id="learning">
+            <h2>Learning & Exploring</h2>
+
+            <p>
+                My journey through machine learning,
+                artificial intelligence, deep learning,
+                and everything I'm curious about.
+            </p>
+
+            <div class="post">
+                <a href="#">My learning journey in AI</a>
+                <div class="date">LEARNING · COMING SOON</div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>A little about me</h2>
+
+            <p>
+                I'm someone who's curious about the world,
+                interested in technology, and always
+                looking for ways to learn and improve.
+
+                This website is a place to document that journey.
+            </p>
+        </section>
+
+        <footer>
+            © 2026 · Built with curiosity.
+        </footer>
+
+    </div>
 </body>
 </html>
