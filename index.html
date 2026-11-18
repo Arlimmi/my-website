@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Sahel Arlimmi</title>
 
     <style>
@@ -19,131 +20,148 @@
             margin: 0;
             background: #fff;
             color: #222;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            line-height: 1.6;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            line-height: 1.7;
         }
 
-        .container {
-            max-width: 680px;
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .layout {
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 55px 24px 70px;
+            padding: 65px 50px;
+            display: grid;
+            grid-template-columns: 220px minmax(0, 680px);
+            gap: 75px;
+            align-items: start;
         }
 
-        /* Name */
+        .sidebar {
+            position: sticky;
+            top: 55px;
+        }
 
         .site-title {
-            margin: 0 0 14px;
+            margin: 0 0 28px;
             color: #111;
-            font-size: 32px;
+            font-size: 36px;
             font-weight: 700;
-            letter-spacing: -1.2px;
-            line-height: 1.2;
-        }
-
-        /* Navigation */
-
-        nav {
-            margin-bottom: 75px;
+            letter-spacing: -1.5px;
+            line-height: 1.15;
         }
 
         .nav-links {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 9px;
         }
 
         .nav-links a {
             color: #555;
-            text-decoration: none;
-            font-size: 13px;
+            font-size: 15px;
         }
 
         .nav-links a:hover {
-            color: #111;
-            text-decoration: underline;
+            color: #000;
         }
 
-        /* Sections */
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .social-links a {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .social-links a:hover {
+            color: #000;
+        }
+
+        main {
+            padding-top: 5px;
+        }
 
         section {
-            margin-bottom: 55px;
-            scroll-margin-top: 25px;
+            margin-bottom: 65px;
+            scroll-margin-top: 30px;
         }
 
         section h2 {
-            margin: 0 0 18px;
-            color: #222;
-            font-family: Georgia, serif;
-            font-size: 21px;
+            margin: 0 0 22px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 23px;
             font-weight: normal;
+            color: #111;
         }
 
-        /* Entries */
-
-        .entry {
-            margin-bottom: 19px;
+        .post {
+            margin-bottom: 25px;
         }
 
-        .entry-date {
+        .post-date {
             display: block;
+            margin-bottom: 3px;
             color: #999;
-            font-size: 12px;
-        }
-
-        .entry h3 {
-            margin: 0;
-            font-family: Georgia, serif;
-            font-size: 15px;
-            font-weight: normal;
-            line-height: 1.5;
-        }
-
-        .entry h3 a {
-            color: #333;
-            text-decoration: none;
-        }
-
-        .entry h3 a:hover {
-            text-decoration: underline;
-        }
-
-        .entry p {
-            margin: 1px 0 0;
-            color: #777;
             font-size: 13px;
         }
 
-        /* About */
-
-        .about-text {
-            max-width: 550px;
-            color: #666;
-            font-size: 14px;
-            line-height: 1.8;
+        .post-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 18px;
+            color: #222;
         }
 
-        /* Mobile */
+        .post-description {
+            margin: 4px 0 0;
+            color: #666;
+            font-size: 14px;
+        }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 40px 22px 50px;
+        footer {
+            margin-top: 90px;
+            color: #aaa;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+            .layout {
+                display: block;
+                padding: 35px 24px 55px;
+            }
+
+            .sidebar {
+                position: static;
+                margin-bottom: 65px;
             }
 
             .site-title {
-                font-size: 29px;
-            }
-
-            nav {
-                margin-bottom: 60px;
-            }
-
-            section {
-                margin-bottom: 45px;
+                font-size: 33px;
             }
 
             .nav-links {
-                gap: 16px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 8px 20px;
+            }
+
+            .social-links {
+                margin-top: 22px;
+            }
+
+            section {
+                margin-bottom: 55px;
             }
         }
     </style>
@@ -151,71 +169,60 @@
 
 <body>
 
-    <main class="container">
+    <div class="layout">
 
-        <!-- Name -->
+        <aside class="sidebar">
 
-        <h1 class="site-title">Sahel Arlimmi</h1>
+            <h1 class="site-title">Sahel Arlimmi</h1>
 
-
-        <!-- Navigation -->
-
-        <nav>
-            <div class="nav-links">
-                <a href="#about">About Me</a>
+            <nav class="nav-links">
                 <a href="#projects">Projects</a>
                 <a href="#journey">My Journey</a>
-                <a href="#fun">Fun & Reflections</a>
+                <a href="#reflections">Fun &amp; Reflections</a>
+            </nav>
+
+            <div class="social-links">
+                <a href="https://x.com/sahelarlimmi"
+                   target="_blank"
+                   rel="noopener noreferrer">Twitter</a>
+
+                <a href="https://github.com/Arlimmi"
+                   target="_blank"
+                   rel="noopener noreferrer">GitHub</a>
             </div>
-        </nav>
 
+        </aside>
 
-        <!-- About Me -->
+        <main>
 
-        <section id="about">
-            <h2>About Me</h2>
-        </section>
+            <section id="projects">
+                <h2>Projects</h2>
 
+                <!-- Add your projects here -->
 
-        <!-- Projects -->
+            </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
+            <section id="journey">
+                <h2>My Journey</h2>
 
-            <div class="entry">
-                <span class="entry-date">Coming soon</span>
-                <h3><a href="#">My first project</a></h3>
-                <p>A space for projects, experiments, and ideas.</p>
-            </div>
-        </section>
+                <!-- Add your journey entries here -->
 
+            </section>
 
-        <!-- My Journey -->
+            <section id="reflections">
+                <h2>Fun &amp; Reflections</h2>
 
-        <section id="journey">
-            <h2>My Journey</h2>
+                <!-- Add your reflections here -->
 
-            <div class="entry">
-                <span class="entry-date">Coming soon</span>
-                <h3><a href="#">Learning notes</a></h3>
-                <p>Things I've learned, explored, and found interesting.</p>
-            </div>
-        </section>
+            </section>
 
+            <footer>
+                © 2026 Sahel Arlimmi
+            </footer>
 
-        <!-- Fun & Reflections -->
+        </main>
 
-        <section id="fun">
-            <h2>Fun & Reflections</h2>
-
-            <div class="entry">
-                <span class="entry-date">Coming soon</span>
-                <h3><a href="#">A little something</a></h3>
-                <p>A collection of moments and things worth sharing.</p>
-            </div>
-        </section>
-
-    </main>
+    </div>
 
 </body>
 </html>
