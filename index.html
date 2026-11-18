@@ -4,10 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="A personal journal about learning, curiosity, technology and life.">
-
-    <title>Beyond the Clouds | My Personal Journal</title>
+    <title>My Little Corner</title>
 
     <style>
         :root {
@@ -21,9 +18,9 @@
         }
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         html {
@@ -34,319 +31,220 @@
             background: var(--cloud);
             color: var(--ink);
             font-family: Arial, sans-serif;
-            line-height: 1.8;
+            line-height: 1.7;
         }
 
         .container {
-            max-width: 760px;
-            margin: auto;
-            padding: 35px 25px;
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 28px;
         }
-
-        /* Navigation */
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 25px;
+            padding: 30px 0;
             border-bottom: 1px solid var(--line);
+            gap: 20px;
         }
 
         .logo {
             font-family: Georgia, serif;
-            font-size: 21px;
-            text-decoration: none;
+            font-size: 17px;
             color: var(--ink);
-        }
-
-        nav a {
             text-decoration: none;
+            white-space: nowrap;
+        }
+
+        nav div {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        nav div a {
             color: var(--muted);
-            font-size: 12px;
-            margin-left: 17px;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
         }
 
-        nav a:hover {
+        nav div a:hover {
             color: var(--gold);
-        }
-
-        /* Hero */
-
-        header {
-            padding: 105px 0 90px;
-        }
-
-        .eyebrow {
-            color: var(--gold);
-            font-size: 11px;
-            letter-spacing: 2px;
-            margin-bottom: 22px;
-        }
-
-        h1, h2, h3 {
-            font-family: Georgia, serif;
-            font-weight: normal;
-        }
-
-        h1 {
-            font-size: clamp(38px, 7vw, 55px);
-            line-height: 1.25;
-            margin-bottom: 18px;
-        }
-
-        .subtitle {
-            color: #899FA8;
-            font-family: Georgia, serif;
-            font-style: italic;
-            font-size: 21px;
-            margin-bottom: 25px;
         }
 
         .intro {
-            color: #727772;
-            font-size: 15px;
-            max-width: 590px;
+            padding: 55px 0 35px;
+            font-family: Georgia, serif;
+            font-size: 21px;
+            line-height: 1.6;
+            max-width: 680px;
+            color: var(--ink);
         }
-
-        /* Sections */
 
         section {
-            margin-bottom: 85px;
-            scroll-margin-top: 30px;
+            padding: 27px 0;
+            border-top: 1px solid var(--line);
         }
 
-        .section-heading {
-            font-size: 27px;
-            margin-bottom: 12px;
+        section h2 {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 5px;
         }
 
         .section-description {
             color: var(--muted);
             font-size: 14px;
-            margin-bottom: 25px;
+            margin-bottom: 18px;
         }
 
-        /* Posts */
-
-        .post {
-            display: block;
-            padding: 20px 0;
-            border-top: 1px solid var(--line);
-            text-decoration: none;
-            color: var(--ink);
+        .item {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--line);
         }
 
-        .post-title {
+        .item:last-child {
+            border-bottom: none;
+        }
+
+        .item h3 {
             font-family: Georgia, serif;
-            font-size: 19px;
-            transition: color 0.2s;
+            font-size: 17px;
+            font-weight: normal;
+            margin-bottom: 3px;
         }
 
-        .post:hover .post-title {
-            color: var(--gold);
-        }
-
-        .post-meta {
+        .item p {
             color: var(--muted);
-            font-size: 10px;
-            letter-spacing: 1px;
-            margin-top: 5px;
+            font-size: 13px;
         }
 
-        /* About */
+        .item a {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .item a:hover {
+            text-decoration: underline;
+        }
 
         .about-text {
-            color: #727772;
+            max-width: 650px;
             font-size: 15px;
-            max-width: 620px;
+            line-height: 1.9;
+            color: var(--muted);
         }
-
-        /* Footer */
 
         footer {
+            text-align: center;
+            padding: 35px 0;
+            margin-top: 10px;
             border-top: 1px solid var(--line);
-            padding-top: 25px;
-            display: flex;
-            justify-content: space-between;
             color: var(--muted);
-            font-size: 11px;
+            font-size: 12px;
         }
 
-        footer a {
-            color: var(--muted);
-            text-decoration: none;
-        }
-
-        footer a:hover {
+        footer span {
             color: var(--gold);
         }
 
-        /* Mobile */
-
-        @media (max-width: 520px) {
-            .container {
-                padding: 25px 20px;
-            }
-
+        @media (max-width: 600px) {
             nav {
+                flex-direction: column;
                 align-items: flex-start;
                 gap: 15px;
             }
 
-            nav a {
-                margin-left: 9px;
-                font-size: 11px;
+            nav div {
+                gap: 18px;
             }
 
-            .logo {
-                font-size: 17px;
+            .intro {
+                padding: 38px 0 28px;
+                font-size: 19px;
             }
 
-            header {
-                padding: 75px 0;
-            }
-
-            footer {
-                gap: 15px;
-                flex-wrap: wrap;
+            section {
+                padding: 23px 0;
             }
         }
     </style>
 </head>
 
 <body>
+    <div class="container">
 
-<div class="container">
+        <nav>
+            <a href="#" class="logo">☁</a>
 
-    <!-- Navigation -->
+            <div>
+                <a href="#creating">Creating</a>
+                <a href="#learning">Learning</a>
+                <a href="#writing">Writing</a>
+                <a href="#about">About</a>
+            </div>
+        </nav>
 
-    <nav>
-        <a href="#" class="logo">Beyond the Clouds. ☁</a>
-
-        <div>
-            <a href="#writing">Writing</a>
-            <a href="#learning">Learning</a>
-            <a href="#about">About</a>
-        </div>
-    </nav>
-
-
-    <!-- Introduction -->
-
-    <header>
-        <div class="eyebrow">
-            ✧ A JOURNEY OF CURIOSITY & GROWTH
+        <div class="intro">
+            A collection of thoughts, experiences, and reflections on life,
+            learning, and everything in between.
         </div>
 
-        <h1>
-            The world is full of things yet to discover.
-        </h1>
+        <section id="creating">
+            <h2>Creating & Projects</h2>
+            <p class="section-description">
+                Things I'm building, experimenting with, and bringing to life.
+            </p>
 
-        <div class="subtitle">
-            Stay curious. Keep wandering. Never stop learning.
-        </div>
-
-        <p class="intro">
-            Hello, I'm Your Name.
-
-            Welcome to my little corner of the internet.
-            A place to explore ideas, document my learning,
-            share experiences, and reflect on the journey.
-        </p>
-    </header>
-
-
-    <!-- Writing -->
-
-    <section id="writing">
-        <h2 class="section-heading">Words & Reflections</h2>
-
-        <p class="section-description">
-            Thoughts, experiences, observations,
-            and everything in between.
-        </p>
-
-        <a href="#" class="post">
-            <div class="post-title">
-                On beginning before feeling ready
+            <div class="item">
+                <h3>Projects coming soon</h3>
+                <p>A space for projects, experiments, and ideas.</p>
             </div>
-            <div class="post-meta">
-                PERSONAL REFLECTION · COMING SOON
+        </section>
+
+        <section id="learning">
+            <h2>Learning & Exploring</h2>
+            <p class="section-description">
+                My journey through deep learning, startups, and everything I'm curious about.
+            </p>
+
+            <div class="item">
+                <h3>Learning notes coming soon</h3>
+                <p>A collection of things I'm discovering and learning along the way.</p>
             </div>
-        </a>
-    </section>
+        </section>
 
+        <section id="writing">
+            <h2>Words & Reflections</h2>
+            <p class="section-description">
+                Thoughts, experiences, and little things worth remembering.
+            </p>
 
-    <!-- Learning -->
-
-    <section id="learning">
-        <h2 class="section-heading">Learning & Exploring</h2>
-
-        <p class="section-description">
-            My journey through AI, machine learning,
-            deep learning and everything I'm curious about.
-        </p>
-
-        <a href="#" class="post">
-            <div class="post-title">
-                Finding my way into machine learning
+            <div class="item">
+                <h3>First thoughts coming soon</h3>
+                <p>A place for personal writing, reflections, and observations.</p>
             </div>
-            <div class="post-meta">
-                LEARNING JOURNAL · COMING SOON
-            </div>
-        </a>
-    </section>
+        </section>
 
+        <section id="about">
+            <h2>About</h2>
 
-    <!-- Projects -->
+            <p class="about-text">
+                I'm a curious, reflective person with an interest in almost
+                everything! I'm here to document my journey, both professionally
+                and personally, and share the thoughts, experiences, and
+                discoveries along the way.
+            </p>
+        </section>
 
-    <section id="projects">
-        <h2 class="section-heading">Things I'm Creating</h2>
+        <footer>
+            Made with curiosity <span>✧</span>
+        </footer>
 
-        <p class="section-description">
-            Experiments, projects, ideas and things
-            I'm building along the way.
-        </p>
-
-        <a href="#" class="post">
-            <div class="post-title">
-                My first AI experiments
-            </div>
-            <div class="post-meta">
-                PROJECTS · COMING SOON
-            </div>
-        </a>
-    </section>
-
-
-    <!-- About -->
-
-    <section id="about">
-        <h2 class="section-heading">A Little About Me</h2>
-
-        <p class="about-text">
-            I'm a curious person with an interest in
-            technology, learning and understanding the world.
-
-            I'm exploring the fields of artificial intelligence,
-            machine learning and deep learning, while also
-            working on becoming a better writer and communicator.
-
-            This website is a place to document that journey —
-            both the professional and personal sides of it.
-        </p>
-    </section>
-
-
-    <!-- Footer -->
-
-    <footer>
-        <span>© 2026 · Beyond the Clouds.</span>
-        <span>A journey, not a destination. ☁</span>
-    </footer>
-
-</div>
-
+    </div>
 </body>
 </html>
