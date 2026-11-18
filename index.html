@@ -64,7 +64,15 @@
         }
 
         .nav-links a {
-            font-size: 14px;
+        font-size: 14px;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        text-underline-offset: 4px;
+        transition: text-decoration-color 0.15s ease;
+        }
+
+        .nav-links a:hover {
+        text-decoration-color: currentColor;
         }
 
         .social-links {
