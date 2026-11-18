@@ -1,28 +1,14 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>My Little Corner</title>
+    <title>Sahel Arlimmi</title>
 
     <style>
-        :root {
-            --cloud: #F8F6F0;
-            --sand: #E9E1D2;
-            --gold: #B49A6B;
-            --sky: #A9C5D2;
-            --ink: #424B50;
-            --muted: #858780;
-            --line: #E3DED4;
-        }
-
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
         }
 
         html {
@@ -30,306 +16,206 @@
         }
 
         body {
-            background: var(--cloud);
-            color: var(--ink);
+            margin: 0;
+            background: #fff;
+            color: #222;
             font-family: Arial, sans-serif;
+            font-size: 14px;
             line-height: 1.6;
         }
 
         .container {
-            max-width: 760px;
+            max-width: 680px;
             margin: 0 auto;
-            padding: 0 28px;
+            padding: 55px 24px 70px;
+        }
+
+        /* Name */
+
+        .site-title {
+            margin: 0 0 14px;
+            color: #111;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -1.2px;
+            line-height: 1.2;
         }
 
         /* Navigation */
 
         nav {
+            margin-bottom: 75px;
+        }
+
+        .nav-links {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px 0;
-            border-bottom: 1px solid var(--line);
+            flex-wrap: wrap;
             gap: 20px;
         }
 
-        .logo {
-            font-family: Georgia, serif;
-            font-size: 17px;
-            color: var(--gold);
-            text-decoration: none;
-        }
-
-        nav div {
-            display: flex;
-            gap: 22px;
-            flex-wrap: wrap;
-        }
-
-        nav div a {
-            color: var(--muted);
+        .nav-links a {
+            color: #555;
             text-decoration: none;
             font-size: 13px;
-            transition: color 0.2s;
         }
 
-        nav div a:hover {
-            color: var(--gold);
-        }
-
-        /* Introduction */
-
-        .intro {
-            padding: 38px 0 30px;
-            font-family: Georgia, serif;
-            font-size: 19px;
-            line-height: 1.6;
-            max-width: 680px;
-            color: var(--ink);
+        .nav-links a:hover {
+            color: #111;
+            text-decoration: underline;
         }
 
         /* Sections */
 
         section {
-            padding: 24px 0;
-            border-top: 1px solid var(--line);
-            scroll-margin-top: 20px;
+            margin-bottom: 55px;
+            scroll-margin-top: 25px;
         }
 
         section h2 {
+            margin: 0 0 18px;
+            color: #222;
             font-family: Georgia, serif;
-            font-size: 22px;
+            font-size: 21px;
             font-weight: normal;
-            margin-bottom: 3px;
         }
 
-        .section-description {
-            color: var(--muted);
-            font-size: 13px;
-            margin-bottom: 15px;
-        }
-
-        /* Blog entries */
+        /* Entries */
 
         .entry {
-            margin-bottom: 17px;
-        }
-
-        .entry:last-child {
-            margin-bottom: 0;
+            margin-bottom: 19px;
         }
 
         .entry-date {
             display: block;
-            color: var(--muted);
+            color: #999;
             font-size: 12px;
-            margin-bottom: 0;
         }
 
         .entry h3 {
-            font-family: Georgia, serif;
-            font-size: 16px;
-            font-weight: normal;
-            line-height: 1.4;
             margin: 0;
+            font-family: Georgia, serif;
+            font-size: 15px;
+            font-weight: normal;
+            line-height: 1.5;
         }
 
         .entry h3 a {
-            color: var(--ink);
+            color: #333;
             text-decoration: none;
-            transition: color 0.2s;
         }
 
         .entry h3 a:hover {
-            color: var(--gold);
+            text-decoration: underline;
         }
 
         .entry p {
-            color: var(--muted);
+            margin: 1px 0 0;
+            color: #777;
             font-size: 13px;
-            line-height: 1.5;
-            margin: 0;
         }
 
         /* About */
 
         .about-text {
-            max-width: 650px;
+            max-width: 550px;
+            color: #666;
             font-size: 14px;
             line-height: 1.8;
-            color: var(--muted);
-        }
-
-        /* Footer */
-
-        footer {
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 5px;
-            border-top: 1px solid var(--line);
-            color: var(--muted);
-            font-size: 12px;
-        }
-
-        footer span {
-            color: var(--gold);
         }
 
         /* Mobile */
 
         @media (max-width: 600px) {
+            .container {
+                padding: 40px 22px 50px;
+            }
+
+            .site-title {
+                font-size: 29px;
+            }
 
             nav {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 13px;
-            }
-
-            nav div {
-                gap: 18px;
-            }
-
-            .intro {
-                padding: 30px 0 25px;
-                font-size: 18px;
+                margin-bottom: 60px;
             }
 
             section {
-                padding: 21px 0;
+                margin-bottom: 45px;
             }
 
-            section h2 {
-                font-size: 21px;
+            .nav-links {
+                gap: 16px;
             }
         }
-
     </style>
 </head>
 
 <body>
 
-    <div class="container">
+    <main class="container">
+
+        <!-- Name -->
+
+        <h1 class="site-title">Sahel Arlimmi</h1>
+
 
         <!-- Navigation -->
 
         <nav>
-            <a href="#" class="logo">☁</a>
-
-            <div>
-                <a href="#creating">Creating</a>
-                <a href="#learning">Learning</a>
-                <a href="#writing">Writing</a>
-                <a href="#about">About</a>
+            <div class="nav-links">
+                <a href="#about">About Me</a>
+                <a href="#projects">Projects</a>
+                <a href="#journey">My Journey</a>
+                <a href="#fun">Fun & Reflections</a>
             </div>
         </nav>
 
 
-        <!-- Introduction -->
-
-        <div class="intro">
-            A collection of thoughts, experiences, and reflections on life,
-            learning, and everything in between.
-        </div>
-
-
-        <!-- Creating & Projects -->
-
-        <section id="creating">
-
-            <h2>Creating & Projects</h2>
-
-            <p class="section-description">
-                Things I'm building, experimenting with, and bringing to life.
-            </p>
-
-            <div class="entry">
-                <span class="entry-date">Coming soon</span>
-
-                <h3>
-                    <a href="#">My first project</a>
-                </h3>
-
-                <p>
-                    A space for projects, experiments, and ideas.
-                </p>
-            </div>
-
-        </section>
-
-
-        <!-- Learning & Exploring -->
-
-        <section id="learning">
-
-            <h2>Learning & Exploring</h2>
-
-            <p class="section-description">
-                My journey through deep learning, startups, and everything I'm curious about.
-            </p>
-
-            <div class="entry">
-                <span class="entry-date">Coming soon</span>
-
-                <h3>
-                    <a href="#">Learning notes</a>
-                </h3>
-
-                <p>
-                    A collection of things I'm discovering and learning along the way.
-                </p>
-            </div>
-
-        </section>
-
-
-        <!-- Words & Reflections -->
-
-        <section id="writing">
-
-            <h2>Words & Reflections</h2>
-
-            <p class="section-description">
-                Thoughts, experiences, and little things worth remembering.
-            </p>
-
-            <div class="entry">
-                <span class="entry-date">Coming soon</span>
-
-                <h3>
-                    <a href="#">First thoughts</a>
-                </h3>
-
-                <p>
-                    A place for personal writing, reflections, and observations.
-                </p>
-            </div>
-
-        </section>
-
-
-        <!-- About -->
+        <!-- About Me -->
 
         <section id="about">
-
-            <h2>About</h2>
-
-            <p class="about-text">
-                I'm a curious, reflective person with an interest in almost
-                everything! I'm here to document my journey, both professionally
-                and personally, and share the thoughts, experiences, and
-                discoveries along the way.
-            </p>
-
+            <h2>About Me</h2>
         </section>
 
 
-        <!-- Footer -->
+        <!-- Projects -->
 
-        <footer>
-            Made with curiosity <span>✧</span>
-        </footer>
+        <section id="projects">
+            <h2>Projects</h2>
 
-    </div>
+            <div class="entry">
+                <span class="entry-date">Coming soon</span>
+                <h3><a href="#">My first project</a></h3>
+                <p>A space for projects, experiments, and ideas.</p>
+            </div>
+        </section>
+
+
+        <!-- My Journey -->
+
+        <section id="journey">
+            <h2>My Journey</h2>
+
+            <div class="entry">
+                <span class="entry-date">Coming soon</span>
+                <h3><a href="#">Learning notes</a></h3>
+                <p>Things I've learned, explored, and found interesting.</p>
+            </div>
+        </section>
+
+
+        <!-- Fun & Reflections -->
+
+        <section id="fun">
+            <h2>Fun & Reflections</h2>
+
+            <div class="entry">
+                <span class="entry-date">Coming soon</span>
+                <h3><a href="#">A little something</a></h3>
+                <p>A collection of moments and things worth sharing.</p>
+            </div>
+        </section>
+
+    </main>
 
 </body>
 </html>
